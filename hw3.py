@@ -5,7 +5,7 @@ import re
 inst = input("Enter a 32-bit instruction: ")
 
 while (not re.match("^[01]{32}$", inst)):
-    inst = input("Invalid input. Please enter a 32-bit binary instruction.")
+    inst = input("Invalid input. Please enter a 32-bit binary instruction.\n")
 inst = int(inst, 2)
 
 #Get opcode and use to determine instruction type
