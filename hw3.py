@@ -6,9 +6,6 @@ inst = input("Enter a 32-bit instruction: ")
 
 while (not re.match("^[01]{32}$", inst)):
     inst = input("Invalid input. Please enter a 32-bit binary instruction.")
-
-#print("Instruction:", inst)
-
 inst = int(inst, 2)
 
 #Get opcode and use to determine instruction type
@@ -23,8 +20,7 @@ funct7   = (inst >> 25) & 0x7F
 
     # Couldnt find an easy pattern for opcodes, idk if you have any ideas for better parsing of type,
     # prints are placeholders for the function
-    # Thinking a function for each type, and another match for the funct3 if relevant, IDK, implement what you think is best
-    # 
+    # Thinking a function for each type with another match for the funct3 if relevant, IDK, implement what you think is best
 match opcode:       
     case 0b0000011:
         print(opcode)   #I-type
